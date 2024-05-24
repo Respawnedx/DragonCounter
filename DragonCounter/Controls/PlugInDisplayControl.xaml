@@ -1,0 +1,56 @@
+﻿<UserControl
+    x:Class="DragonCounter.Controls.PlugInDisplayControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:hdt="clr-namespace:Hearthstone_Deck_Tracker;assembly=HearthstoneDeckTracker"
+    xmlns:lex="http://wpflocalizeextension.codeplex.com"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:themes="clr-namespace:Hearthstone_Deck_Tracker.Utility.Themes;assembly=HearthstoneDeckTracker"
+    MinWidth="50"
+    MinHeight="50"
+    d:DesignHeight="200"
+    d:DesignWidth="250"
+    lex:LocalizeDictionary.DesignCulture="en"
+    lex:ResxLocalizationProvider.DefaultAssembly="DragonCounter"
+    lex:ResxLocalizationProvider.DefaultDictionary="LocalizeTools"
+    Visibility="Visible"
+    mc:Ignorable="d">
+    <UserControl.Resources>
+        <themes:ThemeManager x:Key="ThemeManager" />
+    </UserControl.Resources>
+    <Grid MinWidth="50" MinHeight="50">
+        <Grid.Background>
+            <ImageBrush ImageSource="pack://application:,,,/DragonCounter;component/Controls/Background.png" />
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="2*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <StackPanel Background="#FF0B203A" Margin="0,0,0,36" Grid.RowSpan="2">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <TextBlock
+                    Name="DragonsPlayedTextBlock"
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Margin="10"
+                    Padding="6"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Text="{Binding DragonsPlayed, Mode=OneWay}"
+                    FontSize="26"
+                    FontWeight="Bold" />
+            </Grid>
+        </StackPanel>
+    </Grid>
+</UserControl>
