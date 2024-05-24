@@ -1,5 +1,3 @@
-# DragonCounter
-
 ## Description
 
 DragonCounter is a plugin for Hearthstone Deck Tracker (HDT) that helps players track the number of dragons played during a game.
